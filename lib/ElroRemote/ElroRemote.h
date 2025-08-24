@@ -4,9 +4,6 @@
 
 #include <Arduino.h>
 
-// These preprocessor macros define readable aliases for the device Status
-#define ON 1
-#define OFF 0
 
 // Chanel settings are defined as bitwise values to be used in a mask.
 #define A_SWITCH 1
