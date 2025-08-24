@@ -32,51 +32,43 @@ void setup() {
 
   homeSpan.begin(Category::Lighting,"HomeSpan LED");
   
-  new SpanAccessory(); 
+  new SpanAccessory(); //this one wont show up for some reason
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
-  new CONTROL_ELRO(0,A_SWITCH);
+  new Characteristic::Identify();
+  new Characteristic::Name("Debug");            
+  new CONTROL_ELRO(0,A_SWITCH); 
 
   new SpanAccessory(); 
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
+  new Characteristic::Identify();  
+  new Characteristic::Name("0 B");                  
   new CONTROL_ELRO(0,B_SWITCH);
 
   new SpanAccessory(); 
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
+  new Characteristic::Identify();   
+  new Characteristic::Name("0 C");                 
   new CONTROL_ELRO(0,C_SWITCH);
 
   new SpanAccessory(); 
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
+  new Characteristic::Identify();   
+  new Characteristic::Name("0 D");              
   new CONTROL_ELRO(0,D_SWITCH);
 
   new SpanAccessory(); 
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
-  new CONTROL_ELRO(1,A_SWITCH);
+  new Characteristic::Identify();
+  new Characteristic::Name("1 D");              
+  new CONTROL_ELRO(1,D_SWITCH);
 
-  new SpanAccessory(); 
+    new SpanAccessory(); 
   new Service::AccessoryInformation(); 
-  new Characteristic::Identify();               
-  new CONTROL_ELRO(1,B_SWITCH);
-
-  new SpanAccessory(); 
-  new Service::AccessoryInformation();    
-  new Characteristic::Identify();                       
-  new CONTROL_ELRO(1,C_SWITCH);                                  // ...and replaced with a single line that instantiates a second DEV_LED Service on Pin 17
-
-  new SpanAccessory(); 
-  new Service::AccessoryInformation();    
-  new Characteristic::Identify();                       
-  new CONTROL_ELRO(1,D_SWITCH);    
-} // end of setup()
-
-//////////////////////////////////////
+  new Characteristic::Identify();
+  new Characteristic::Name("0 A");              
+  new CONTROL_ELRO(0,A_SWITCH);
+}
 
 void loop(){
-  
   homeSpan.poll();
-  
-} // end of loop()
+}
