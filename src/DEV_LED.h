@@ -25,12 +25,6 @@ struct DEV_LED : Service::LightBulb {               // First we create a derived
 
   // Finally, we over-ride the default update() method with instructions that actually turn on/off the LED.  Note update() returns type boolean
 
-  void affe(){
-  remote(1, A_SWITCH, ON);
-  delay(3000);
-  remote(1, A_SWITCH, OFF);
-  delay(3000);
-}
   boolean update(){            
 
     affe();
