@@ -4,11 +4,14 @@
 # Prerequisites
 *.d
 
-# Object files
+# C/C++ build artifacts (optional, depending on your setup)
 *.o
-*.ko
-*.obj
+*.a
 *.elf
+*.bin
+*.hex
+*.lst
+*.map
 
 # Linker output
 *.ilk
@@ -80,10 +83,40 @@ fp-info-cache
 *.dsn
 *.ses
 
-# Platformio files
-.pio
-.vscode/.browse.c_cpp.db*
-.vscode/c_cpp_properties.json
-.vscode/launch.json
-.vscode/ipch
+# PlatformIO
+#
+# Build environments, temporary folders, and generated files
+.pio/
+.pioenvs/
+.piolibdeps/
+.cache/
+.vscode/.browse.c_cpp.db
+**/.pioenvs
+**/.piolibdeps
 
+# PlatformIO's own .gitignore that may be auto-generated in subfolders
+.gitignore
+
+# VS Code
+#
+# User-specific settings, caches, and build folders
+.vscode/
+# The line above ignores the entire .vscode folder.
+# If you want to share specific settings with the team,
+# you can un-comment the lines below to keep them.
+# !.vscode/extensions.json
+# !.vscode/settings.json
+# !.vscode/launch.json
+# !.vscode/tasks.json
+
+# If you use the Arduino framework, PlatformIO may create a
+# 'libdeps' folder. It is already covered by .piolibdeps.
+#
+# In a multi-folder workspace, PlatformIO might create .vscode
+# in subfolders.
+# **/.vscode/
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
