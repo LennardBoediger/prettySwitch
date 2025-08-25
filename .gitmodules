@@ -1,0 +1,3 @@
+[submodule "lib/homespan"]
+	path = lib/homespan
+	url = https://github.com/LennardBoediger/HomeSpan.git
