@@ -26,10 +26,38 @@ I've integrated iOS HomeKit support as a bonus, which allows you to control your
 
 ---
 
+### **Hardware: 433MHz Wireless Sockets**
+
+This project uses inexpensive 433MHz wireless sockets. These are produced by many different companies and are widely available. My specific ones are from Pollin and Brennenstuhl.
+
+[Funkschalt-Set RCS 1000 N Comfort](https://www.brennenstuhl.com/de-DE/produkte/funksteckdosen/funkschalt-set-rcs-1000-n-comfort-1-handsender-2-schaltempfaenger-1000w).
+
+They are all very similar in their functionality and protocol. To ensure reliable operation, make sure to get the ones that use DIP switches and not the ones that are self-learning, as they lose their settings after a power outage.
+
+
 ### **Getting Started**
 ```console
 git clone --recurse-submodules git@github.com:LennardBoediger/prettySwitch.git
 ```
 
+---
 
+### **Setting Up the DIP Switches**
+
+To link your remote control to your wireless sockets, you need to configure the DIP switches on both devices. This is a crucial step to ensure they communicate on the same channel.
+
+**1. Locate the DIP Switches:**
+* **On the socket:** The switches are typically found in a small compartment, often on the side or back of the socket. You may need a small screwdriver to open the cover.
+
+**2. Configure the System Code:**
+The first five switches (usually labeled 1 through 5) define the "system code" or "group." This code determines which remote controls can talk to which sockets.
+* Use a small object (like a tiny screwdriver or a ballpoint pen) to set the switches to either the ON (up) or OFF (down) position.
+* Set the switches on **all** your remotes and **all** your sockets to the exact same combination. For example, you could choose a pattern like ON-OFF-OFF-ON-ON.
+<img width="235" height="296" alt="Screenshot 2025-08-25 at 12 22 10 copy" src="https://github.com/user-attachments/assets/79602480-a044-4834-96bc-47cd321efd94" />
+
+**3. Configure the Channel Code:**
+The remaining switches (often labeled A, B, C, D, etc.) are used to assign a specific channel to a remote's button. For a single remote with four buttons (like the Brennenstuhl one), each button will correspond to a different channel setting on the socket.
+* The remote's channel switches are often located next to the system code switches. You may have one for each button (e.g., A, B, C, D).
+* The socket's channel switches are also located in its compartment. You'll need to set the channel on the socket to match the specific button you want to use on the remote. For example, if you set a socket's channel switch to 'A', it will only respond to the 'A' button on your remote.
+<img width="235" height="74" alt="Screenshot 2025-08-25 at 12 22 10" src="https://github.com/user-attachments/assets/80d4258a-5f72-4df7-a3f8-410d26792de7" />
 
