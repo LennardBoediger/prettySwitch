@@ -36,7 +36,7 @@ void init(){
 
 
 
-void remote(int familyId, int chanelCode, int deviceStatus) {
+void remote(int familyId, int channelCode, int deviceStatus) {
   // Calculate device code
   for (int i = 0; i < 5; i++) {
     if (FAMILY_CODE[familyId][i] == 0){
@@ -49,7 +49,7 @@ void remote(int familyId, int chanelCode, int deviceStatus) {
   // Calculate receiver code
   int currentBit = 1;
   for (int i = 0; i < 5; i++) {
-    if ((chanelCode & currentBit) > 0) {
+    if ((channelCode & currentBit) > 0) {
       bitPattern[5 + i] = HIGH_PULSE_ENCODING;
     } else {
       bitPattern[5 + i] = LOW_PULSE_ENCODING;

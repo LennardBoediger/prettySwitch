@@ -24,6 +24,6 @@ int clearBit(int N, int K);
 //    {1, 1, 1, 0, 1}  // Device 3
 // chanelCode: A_SWITCH or B_SWITCH  or C_SWITCH or  D_SWITCH 
 // deviceStatus: ON or OFF
-void remote(int familyId, int chanelCode, int deviceStatus);
+void remote(int familyId, int channelCode, int deviceStatus);
 
 #endif // ELRO_REMOTE_H
