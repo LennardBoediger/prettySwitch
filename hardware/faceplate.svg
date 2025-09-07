@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="200mm" height="100mm" viewBox="0 0 200 100">
+  
+  <!--
+    UPDATED SVG file for a laser-cut faceplate.
+    Dimensions: 200mm x 100mm
+    Hole diameter: 5.8mm for the main holes
+    Number of main holes: 9
+    Mounting holes: 2 for M4 screws, 4.5mm diameter
+    Spacing: Main holes are 15mm from horizontal edges.
+    Corner radius: 8mm
+    
+    This file defines the outer rectangle and the holes
+    as vector paths for precise cutting.
+  -->
+
+  <!-- The outer rectangle of the faceplate with rounded corners -->
+  <rect x="0" y="0" width="200" height="100" rx="8" ry="8" style="fill:none; stroke:#000000; stroke-width:0.5;" />
+  
+  <!-- The main holes (9 total) and the two mounting holes -->
+  <g id="holes" style="fill:#FFFFFF; stroke:#000000; stroke-width:0.5;">
+    <!-- Main holes (9 total) placed at y=50 (centered vertically) -->
+    <circle cx="15" cy="50" r="2.9" />
+    <circle cx="36.25" cy="50" r="2.9" />
+    <circle cx="57.5" cy="50" r="2.9" />
+    <circle cx="78.75" cy="50" r="2.9" />
+    <circle cx="100" cy="50" r="2.9" />
+    <circle cx="121.25" cy="50" r="2.9" />
+    <circle cx="142.5" cy="50" r="2.9" />
+    <circle cx="163.75" cy="50" r="2.9" />
+    <circle cx="185" cy="50" r="2.9" />
+    
+    <!-- M4 mounting holes (4.5mm diameter) at opposing corners -->
+    <circle cx="8" cy="8" r="2.25" />
+    <circle cx="192" cy="92" r="2.25" />
+  </g>
+  
+</svg>
