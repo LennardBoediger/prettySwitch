@@ -35,7 +35,6 @@ void init(){
 }
 
 
-
 void remote(int familyId, int channelCode, int deviceStatus) {
   // Calculate device code
   for (int i = 0; i < 5; i++) {
@@ -86,6 +85,13 @@ void remote(int familyId, int channelCode, int deviceStatus) {
         pulseCheck = pulseCheck >> 1;
       }
     }
+  }
+}
+
+void broadcast(int familyId, int deviceStatus){
+  for (size_t i = 1; i <= 8; i<<1)
+  {
+    remote(familyId, i, deviceStatus);
   }
 }
 

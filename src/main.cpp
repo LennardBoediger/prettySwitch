@@ -7,6 +7,8 @@
 #define ON 1
 #define OFF 0
 
+#define CLAPPER_PIN 15
+
 struct CONTROL_ELRO : Service::LightBulb {
   int familyId;  
   int channelCode;                                    
@@ -24,6 +26,7 @@ struct CONTROL_ELRO : Service::LightBulb {
 };
 
 void setup() {
+  pinMode(CLAPPER_PIN, INPUT);
   init();
   Serial.begin(9600);
 
@@ -85,5 +88,11 @@ void setup() {
 }
 
 void loop(){
+  int soundValue = digitalRead(CLAPPER_PIN);
+  if (soundValue == LOW){
+    broadcast(0, OFF);
+    broadcast(1, OFF);
+  }
+
   homeSpan.poll();
 }

@@ -26,4 +26,13 @@ int clearBit(int N, int K);
 // deviceStatus: ON or OFF
 void remote(int familyId, int channelCode, int deviceStatus);
 
+// broadcast to all devices of the given familyId
+// familyId:
+//    {0, 1, 1, 1, 1}  // Device 0
+//    {1, 0, 1, 1, 1}  // Device 1
+//    {1, 1, 0, 1, 1}  // Device 2
+//    {1, 1, 1, 0, 1}  // Device 3
+// deviceStatus: ON or OFF
+void broadcast(int familyId, int deviceStatus);
+
 #endif // ELRO_REMOTE_H
